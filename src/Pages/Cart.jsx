@@ -66,7 +66,7 @@ const Cart = () => {
       <Box p={20}>
         <Breadcrumb fontWeight='medium' fontSize='sm'>
           <BreadcrumbItem>
-            <BreadcrumbLink href='/home'>HOME</BreadcrumbLink>
+            <BreadcrumbLink href='/home' color={"gray"}>HOME</BreadcrumbLink>
           </BreadcrumbItem>
 
           <BreadcrumbItem>

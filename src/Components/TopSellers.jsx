@@ -38,7 +38,7 @@ const TopSellers = () => {
           )
         })}
       </Grid>
-      <Button p={8} fontWeight={"md"} textColor={"white"}  variant='outline' backgroundColor={"#024e82"} _hover={{backgroundColor:"#024e82"}}>SHOP NOW</Button>
+      <Button p={8} mb={20} fontWeight={"md"} textColor={"white"}  variant='outline' backgroundColor={"#024e82"} _hover={{backgroundColor:"#024e82"}}>SHOP NOW</Button>
     </>
   )
 }
