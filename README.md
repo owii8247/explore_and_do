@@ -1,70 +1,87 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Explore & Do</h1>
 
-## Available Scripts
+<h3 align="center">Explore & Do is an online e-commerce website where user can first register and login to access the varities of products ready to wear at affordable prices and offers and user can add it cart and easy checkout options available.</h3>
 
-In the project directory, you can run:
+<h3>Vercel Deployed Link</h3>
 
-### `npm start`
+<a  href="https://front-end-two-liart.vercel.app/">🔗 Explore & Do </a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>JSON Render Deployed Link</h3>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<a  href="https://express-json.onrender.com/arrivals">🔗 JSON Data Deployed </a>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Tech Stacks & Packages
+## Frontend
+- React 
+- Chakra UI
+- Responsiveness for all screen sizes
+- Light and Dark Mode
+- Vercel Deployment
+## Backend
+- Render Deployment
 
-### `npm run build`
+ ## Pages 
+- Signup & Login Page
+- Home Page 
+- Product Detail Page
+- Cart & Checkout Page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Glimpses of Website :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![hometop](https://user-images.githubusercontent.com/100846987/230575904-c2df233f-bd8f-4086-8d23-2117681acc39.PNG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<table>
 
-### `npm run eject`
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/100846987/230576723-2f1c5622-8d03-4b77-9d26-5963ce0ebe0d.PNG" alt="register" /></td>
+    <td><img src="https://user-images.githubusercontent.com/100846987/230576803-6052aa9c-ecab-4812-a291-3b297b6d153c.PNG" alt="login" /></td>
+  </tr>
+  
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/100846987/230576027-08698363-299b-4d58-8803-725be85483ad.PNG" alt="newarrival" /></td>
+    <td><img src="https://user-images.githubusercontent.com/100846987/230576259-9f222ac7-7daa-4ee0-9925-3d4e2852fe45.PNG" alt="topseller" /></td>
+  </tr>
+  
+  <tr>
+  <td><img src="https://user-images.githubusercontent.com/100846987/230579582-b1f49cc2-4007-40c7-9e1e-039f2c24814e.PNG" alt="darkmode"/></td>
+  <td><img src="https://user-images.githubusercontent.com/100846987/230580114-3187af91-70e5-4002-a0e9-6235d1e5fd08.PNG" alt="darkmode2"/></td>
+  </tr>
+  
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/100846987/230577131-324b8521-e3b9-4d57-ad0f-e90926e2f76a.PNG" alt="productdetail"/></td>
+    <td><img src="https://user-images.githubusercontent.com/100846987/230577257-69d8d976-f57b-4790-8caa-2b074c2fb645.PNG"  alt="cart" /></td>
+  </tr>
+  
+</table>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![navbar](https://user-images.githubusercontent.com/100846987/230577446-843d693f-cce6-4ebc-b3c4-ce1a087fb700.PNG)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Run Locally
+Clone the Project
+```
+https://github.com/owii8247/explore_and_do.git
+``` 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Install Dependencies
+```
+npm install
+```
+Run App
+```
+npm run start
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Let's Connect
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[![linkedin](https://img.shields.io/badge/mdowaisathar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-owais-athar-a16337a2/)
+[![Github](https://img.shields.io/badge/owii8247-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/owii8247/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-20232A?style=for-the-badge&logo=portfolio&logoColor=white)](https://owii8247.github.io/)
 
-### Code Splitting
+## Show your support
+<p> Give a ⭐️ if you like this project! </p>
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
