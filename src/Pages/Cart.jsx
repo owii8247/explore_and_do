@@ -8,7 +8,7 @@ import { CloseIcon } from '@chakra-ui/icons'
 const Cart = () => {
   const [cart, setCart] = useState([])
 
-  
+
 
   useEffect(() => {
     const cartData = JSON.parse(localStorage.getItem('cart') || '[]');
@@ -54,7 +54,7 @@ const Cart = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
- 
+
 
   return (
     <>
@@ -70,84 +70,84 @@ const Cart = () => {
           </BreadcrumbItem>
 
         </Breadcrumb>
-
-        <Table variant="striped">
-          <Thead>
-            <Tr style={{fontWeight:"bold", color:"black"}}>
-              <Th></Th>
-              <Th></Th>
-              <Th style={{fontWeight:"bolder", fontSize:"16px",  color:"black"}}>Product</Th>
-              <Th style={{fontWeight:"bolder", fontSize:"16px", color:"black"}}>Price</Th>
-              <Th style={{fontWeight:"bolder", fontSize:"16px", color:"black"}}>Quantity</Th>
-              <Th style={{fontWeight:"bolder", fontSize:"16px", color:"black"}}>Total</Th>
-
-            </Tr>
-          </Thead>
-          <Tbody>
-            {cart.map((item, index) => (
-              <Tr key={index}>
-                <Td>
-                  <IconButton
-                    icon={<CloseIcon />}
-                    onClick={() => handleRemoveFromCart(index)}
-                    variant="ghost"
-                    colorScheme="red"
-                  />
-                </Td>
-                <Td>
-                  <Image src={item.image} alt={item.name} width="50px" height="50px" />
-                </Td>
-                <Td style={{fontWeight:"bold", color:"gray"}}>{item.name}</Td>
-                <Td style={{fontWeight:"normal", color:"gray"}}>${item.price}</Td>
-                <Td>
-                  <HStack>
-                    <IconButton
-                      icon={<FaMinus />}
-                      onClick={() => handleQuantityDecrement(index)}
-                      variant="outline"
-                      colorScheme="blue"
-                      size="sm"
-                    />
-
-                    <Input
-                      type="number"
-                      min="1"
-                      max="3"
-                      w={"20%"}
-                      value={item.quantity}
-                      onChange={(e) =>
-                        handleQuantityChange(index, parseInt(e.target.value))
-                      }
-                    />
-                    <IconButton
-                      icon={<FaPlus />}
-                      onClick={() => handleQuantityIncrement(index)}
-                      variant="outline"
-                      colorScheme="blue"
-                      size="sm"
-                    />
-                  </HStack>
-                </Td>
-                <Td style={{fontWeight:"normal", color:"#024e82"}}>${(item.price * item.quantity).toFixed(2)}</Td>
+        <Box overflowX="auto">
+          <Table variant="striped">
+            <Thead>
+              <Tr style={{ fontWeight: "bold", color: "black" }}>
+                <Th></Th>
+                <Th></Th>
+                <Th style={{ fontWeight: "bolder", fontSize: "16px", color: "black" }}>Product</Th>
+                <Th style={{ fontWeight: "bolder", fontSize: "16px", color: "black" }}>Price</Th>
+                <Th style={{ fontWeight: "bolder", fontSize: "16px", color: "black" }}>Quantity</Th>
+                <Th style={{ fontWeight: "bolder", fontSize: "16px", color: "black" }}>Total</Th>
 
               </Tr>
-            ))}
-          </Tbody>
-        </Table>
+            </Thead>
+            <Tbody>
+              {cart.map((item, index) => (
+                <Tr key={index}>
+                  <Td>
+                    <IconButton
+                      icon={<CloseIcon />}
+                      onClick={() => handleRemoveFromCart(index)}
+                      variant="ghost"
+                      colorScheme="red"
+                    />
+                  </Td>
+                  <Td>
+                    <Image src={item.image} alt={item.name} width="50px" height="50px" />
+                  </Td>
+                  <Td style={{ fontWeight: "bold", color: "gray" }}>{item.name}</Td>
+                  <Td style={{ fontWeight: "normal", color: "gray" }}>${item.price}</Td>
+                  <Td>
+                    <HStack>
+                      <IconButton
+                        icon={<FaMinus />}
+                        onClick={() => handleQuantityDecrement(index)}
+                        variant="outline"
+                        colorScheme="blue"
+                        size="sm"
+                      />
 
-        <Box textAlign={"start"} w={"45%"} p={8} lineHeight={"50px"} mt={10}>
-          <Heading mb={5}>Cart Totals</Heading>
-          <Flex justifyContent={"space-between"} fontWeight={"semibold"}>
+                      <Input
+                        type="number"
+                        min="1"
+                        max="3"
+                        w={"20%"}
+                        value={item.quantity}
+                        onChange={(e) =>
+                          handleQuantityChange(index, parseInt(e.target.value))
+                        }
+                      />
+                      <IconButton
+                        icon={<FaPlus />}
+                        onClick={() => handleQuantityIncrement(index)}
+                        variant="outline"
+                        colorScheme="blue"
+                        size="sm"
+                      />
+                    </HStack>
+                  </Td>
+                  <Td style={{ fontWeight: "normal", color: "#024e82" }}>${(item.price * item.quantity).toFixed(2)}</Td>
+
+                </Tr>
+              ))}
+            </Tbody>
+          </Table>
+        </Box>
+        <Box textAlign={"start"} w={"45%"} p={8} lineHeight={"50px"} mt={10} width={{ base: "100%", sm: "45%", md: "45%" }}>
+          <Heading mb={5} >Cart Totals</Heading>
+          <Flex justifyContent={"space-between"} fontWeight={"semibold"} flexWrap="wrap">
             <Text textColor={"gray"} >Subtotal</Text>
             <Text>${totalPrice.toFixed(2)}</Text>
           </Flex>
           <Divider />
-          <Flex justifyContent={"space-between"} textColor={"gray"} fontWeight={"semibold"}>
+          <Flex justifyContent={"space-between"} textColor={"gray"} fontWeight={"semibold"} flexWrap="wrap">
             <Text>Shipping</Text>
             <Text>FREE!!!</Text>
           </Flex>
           <Divider />
-          <Flex justifyContent={"space-between"} fontWeight={"semibold"}>
+          <Flex justifyContent={"space-between"} fontWeight={"semibold"} flexWrap="wrap">
             <Text>Total</Text>
             <Text>${totalPrice.toFixed(2)}</Text>
           </Flex>
