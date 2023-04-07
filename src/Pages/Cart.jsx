@@ -8,6 +8,8 @@ import { CloseIcon } from '@chakra-ui/icons'
 const Cart = () => {
   const [cart, setCart] = useState([])
 
+  
+
   useEffect(() => {
     const cartData = JSON.parse(localStorage.getItem('cart') || '[]');
     setCart(cartData);
@@ -19,13 +21,6 @@ const Cart = () => {
     localStorage.setItem('cart', JSON.stringify(newCart));
     setCart(newCart);
   };
-
-  // const handleQuantityChange = (index, quantity) => {
-  //   const newCart = [...cart];
-  //   newCart[index].quantity = quantity;
-  //   localStorage.setItem('cart', JSON.stringify(newCart));
-  //   setCart(newCart);
-  // };
 
   const handleQuantityChange = (index, quantity) => {
     const newCart = [...cart];
@@ -59,6 +54,7 @@ const Cart = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
+ 
 
   return (
     <>

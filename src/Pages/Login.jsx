@@ -104,7 +104,15 @@ function Login() {
                         )}
                         <Button type="submit" w={"full"} background={"#024e82"} _hover={{ background: "#024e82" }} onClick={handleSwitchMode}>{isLoginMode ? <><Link to="/home"><Button w={"full"} background={"#024e82"} textColor={"white"} _hover={{ background: "#024e82" }}>Login Now</Button></Link></> : <Text textColor={"white"}>Signup Now</Text>}</Button>
                         <br /><br />
+                        <Flex alignItems="center">
+                            <Box flex="1" borderBottom="1px solid" borderColor="gray.400" mr="4" />
+                            <Text fontWeight="medium" textTransform="uppercase" textColor={"gray"}>
+                                OR
+                            </Text>
+                            <Box flex="1" borderBottom="1px solid" borderColor="gray.400" ml="4" />
 
+                        </Flex>
+                        <br />
                         <Button type="button" w={"full"} textColor={"#024e82"} onClick={handleSwitchMode}>
                             {isLoginMode ? <Text >Signup Now</Text> : 'Login Now'}
                         </Button>
