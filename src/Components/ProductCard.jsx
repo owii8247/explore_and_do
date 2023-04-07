@@ -9,7 +9,7 @@ const ProductCard = ({ products }) => {
             <Link to={`/product/${products.id}`}>
                 <Button p={10} w={"full"}>
                     <Text>{products.name} <br /><br />
-                        ${products.price}</Text>
+                    <span style={{color:"#024e82"}}>${products.price}</span></Text>
                 </Button>
             </Link>
         </GridItem>

@@ -51,24 +51,27 @@ export default function Navbar() {
                     colorScheme="brand"
                     variant="ghost"
                 />
-                
+                <Link to="/home">
                 <Heading size="xl" ml="4" fontWeight={"md"} >
-                ECloths
-            </Heading>
+                    ECloths
+                </Heading>
+                </Link>
                 <HStack spacing={8} alignItems={"center"} >
-                    <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }} fontSize={"xs"}>
+                    <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }} fontSize={"xs"} cursor={"pointer"}>
                         {Links.map((link) => (
                             <NavLink key={link}>{link}</NavLink>
                         ))}
                     </HStack>
 
+
+                    
+                    <Button variant="outline"> <Text fontSize={"xs"}>ORDER HISTORY</Text></Button>
+                    <Button> <FiUser /></Button>
+                    <Link to="/cart">
+                    <Button><BsBagDash /> <Text fontSize={"xs"}>10</Text></Button></Link>
                     <Button colorScheme="brand" variant="ghost" onClick={toggleColorMode}>
                         {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                     </Button>
-
-                    <Button variant="outline"> <Text fontSize={"xs"}>ORDER HISTORY</Text></Button>
-                    <Button> <FiUser /></Button>
-                    <Button><BsBagDash /> <Text fontSize={"xs"}>10</Text></Button>
                     <Button> <HamburgerIcon /></Button>
                     <Link to="/"><Button colorScheme="brand" variant="outline">
                         <Text fontSize={"xs"}>SIGN OUT</Text>
@@ -84,7 +87,11 @@ export default function Navbar() {
                         ))}
                         <Button variant="outline"> <Text fontSize={"xs"}>ORDER HISTORY</Text></Button>
                         <Button> <FiUser /></Button>
-                        <Button><BsBagDash /> <Text fontSize={"xs"}>10</Text></Button>
+                        <Link to="/cart">
+                        <Button><BsBagDash /> <Text fontSize={"xs"}>10</Text></Button></Link>
+                        <Button colorScheme="brand" variant="ghost" onClick={toggleColorMode}>
+                            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                        </Button>
                         <Link to="/"><Button colorScheme="brand" variant="outline">
                             <Text fontSize={"xs"}>SIGN OUT</Text>
                         </Button></Link>

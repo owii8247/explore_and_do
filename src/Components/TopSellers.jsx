@@ -28,9 +28,10 @@ const TopSellers = () => {
             <>
               <GridItem key={item.id}>
                 <Image src={item.image} alt={item.name} w="100%" h="auto" mb={5}/>
-                <Button w={"full"} p={10} background={"white"} _hover={{background:"white"}}>
+                <Button w={"full"} p={10} >
                 <Text>{item.name} <br/><br/>
-                ${item.price}</Text>
+                <span style={{color:"#024e82"}}>${item.price}</span>
+                </Text>
                 </Button>
               </GridItem>
             </>

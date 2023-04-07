@@ -1,11 +1,12 @@
 import { Badge, Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Flex, Heading, Image, Select, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Navbar from '../Components/Navbar'
 
 const ProductDetails = () => {
   const [singleProduct, setSingleProduct] = useState("")
   const params = useParams()
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch(`https://express-json.onrender.com/arrivals/${params.id}`)
@@ -15,6 +16,15 @@ const ProductDetails = () => {
       })
   }, [params])
   //console.log("single", singleProduct)
+
+  const handleAddToCart = () => {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    cart.push({ ...singleProduct, quantity: 1 });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    navigate("/cart")
+  };
+
+
   return (
     <>
     <Navbar /> 
@@ -24,7 +34,7 @@ const ProductDetails = () => {
           <Image src={singleProduct.image} />
           <Badge
           position="absolute"
-          top="0"
+          top="2"
           left="5"
           variant="solid"
           size="sm"
@@ -63,13 +73,17 @@ const ProductDetails = () => {
             <Text fontWeight="bold">${singleProduct.price}</Text>
           </Flex>
           <Text mt={5} fontWeight={"semibold"} color={"gray"}>{singleProduct.details}</Text>
-          <Select placeholder='Select Size' w={"40%"} mt={10}>
-            <option value='option1'>Option 1</option>
-            <option value='option2'>Option 2</option>
-            <option value='option3'>Option 3</option>
+          <Select placeholder='Select Size' w={"40%"} mt={10} >
+            <option value='Small' >Small  S </option>
+            <option value='Medium'>Medium  M</option>
+            <option value='Large'>Large L</option>
+            <option value='extralarge'>Extra Large XL</option>
+
           </Select>
           <Button p={3} fontWeight={"md"} textColor={"white"} variant='outline' mt={8}
-            backgroundColor={"#024e82"} _hover={{ backgroundColor: "#024e82" }}>ADD TO CART</Button>
+            backgroundColor={"#024e82"} _hover={{ backgroundColor: "#024e82" }}
+            onClick={handleAddToCart}
+            >ADD TO CART</Button>
           <Text mt={5}>Category : <span>{singleProduct.category}</span></Text>
           <Text>Tags : <span>{singleProduct.tags}</span></Text>
 

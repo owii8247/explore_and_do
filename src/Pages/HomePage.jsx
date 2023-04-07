@@ -16,6 +16,7 @@ const HomePage = () => {
     <section>
         <NewArrivals />
     </section>
+    
     <section>
       <Options />
     </section>
