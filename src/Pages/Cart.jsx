@@ -117,7 +117,7 @@ const Cart = () => {
                       type="number"
                       min="1"
                       max="3"
-                      w={"15%"}
+                      w={"20%"}
                       value={item.quantity}
                       onChange={(e) =>
                         handleQuantityChange(index, parseInt(e.target.value))
