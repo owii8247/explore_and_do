@@ -25,8 +25,8 @@ function Login() {
 
     return (
         <>
-            <Flex>
-                <Box w={"40%"} p={20} bg={"white"}>
+            <Flex flexWrap="wrap" justifyContent="center">
+                <Box p={20} bg={"white"} width={{ base: "100%", sm: "45%", md: "40%" }}>
                     <FormControl onSubmit={handleSubmit}>
                         {isLoginMode ? (<><Text fontSize='xl' fontWeight={"bold"}>Login into your account</Text></>) : (<><Text fontSize='xl' fontWeight={"bold"}>Create your account</Text></>)}
                         <br /><br />
@@ -118,7 +118,7 @@ function Login() {
                         </Button>
                     </FormControl>
                 </Box>
-                <Box w={"60%"} p={10}>
+                <Box  p={10} width={{ base: "100%", sm: "45%", md: "55%" }}>
                     {isLoginMode ? <>
                         <Text fontSize='3xl' fontWeight={"bold"} mb={10} >Welcome Back!</Text>
                         <Image src={login} /></> : <><Image p={10} src={signup} /></>}
