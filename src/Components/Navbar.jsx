@@ -13,7 +13,7 @@ import {
     useColorMode,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsBagDash } from "react-icons/bs"
 import { FiUser } from "react-icons/fi"
 
@@ -38,6 +38,13 @@ const NavLink = ({ children, ...rest }) => (
 export default function Navbar() {
     const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen: isMobileNavOpen, onToggle } = useDisclosure();
+    const navigate = useNavigate()
+
+    const handleSignOut = () => {
+        localStorage.removeItem('user');
+        alert("User Loged Out Successfully")
+        navigate("/signup")
+      }
 
     return (
         <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
@@ -73,9 +80,9 @@ export default function Navbar() {
                         {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                     </Button>
                     <Button> <HamburgerIcon /></Button>
-                    <Link to="/"><Button colorScheme="brand" variant="outline">
+                    <Button colorScheme="brand" variant="outline" onClick={handleSignOut}>
                         <Text fontSize={"xs"}>SIGN OUT</Text>
-                    </Button></Link>
+                    </Button>
                 </HStack>
             </Flex>
 
@@ -92,9 +99,9 @@ export default function Navbar() {
                         <Button colorScheme="brand" variant="ghost" onClick={toggleColorMode}>
                             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                         </Button>
-                        <Link to="/"><Button colorScheme="brand" variant="outline">
+                        <Button colorScheme="brand" variant="outline" onClick={handleSignOut}>
                             <Text fontSize={"xs"}>SIGN OUT</Text>
-                        </Button></Link>
+                        </Button>
                     </Stack>
 
                 </Box>
