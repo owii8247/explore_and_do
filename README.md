@@ -23,7 +23,7 @@
 - Render Deployment
 
  ## Pages 
-- Signup & Login Page
+- Signup & Login Page (Form Validation With Alert)
 - Home Page 
 - Product Detail Page
 - Cart & Checkout Page
