@@ -14,6 +14,7 @@ function Login() {
     
     const navigate = useNavigate()
 
+    
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -25,8 +26,6 @@ function Login() {
             alert('Invalid email or password.');
         }
     };
-
-    
 
     return (
         <>

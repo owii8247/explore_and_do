@@ -41,7 +41,7 @@ export default function Navbar() {
     const navigate = useNavigate()
 
     const handleSignOut = () => {
-        localStorage.removeItem('user');
+        //localStorage.removeItem('user');
         alert("User Loged Out Successfully")
         navigate("/signup")
       }
